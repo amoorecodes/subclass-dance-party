@@ -1,5 +1,5 @@
 var SubZero = function(top, left, timeBetweenSteps) {
-  makeBlinkyDancer.call(this, top, left, timeBetweenSteps); 
+  makeDancer.call(this, top, left, timeBetweenSteps); 
   this.top = top;
   this.left = left;
   $(this).addClass('.subZero');
@@ -12,9 +12,17 @@ var SubZero = function(top, left, timeBetweenSteps) {
   // this.$node = $('<span class="blinkyDancer"></span>');
 
 };
-SubZero.prototype = Object.create(makeBlinkyDancer.prototype);
+SubZero.prototype = Object.create(makeDancer.prototype);
 SubZero.prototype.constructor = SubZero;
+SubZero.prototype.oldStep = makeDancer.prototype.step
+SubZero.prototype.step = function() {
+  makeDancer.prototype.step.call(this);
 
+  this.$node.toggle();
+}
+  // this.toggleClass($'.subzero')
+  // this.oldStep();
+ 
 // var makeBlinkyDancer = class BlinkyDancer extends makeDancer {
 //   constructor() {
 //     super();

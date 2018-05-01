@@ -27,7 +27,11 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    $('body').append(dancer.$node);
+    $('.dancefloor').append(dancer.$node);
+  });
+
+  $('.dancer').on('mouseover', function(event) {
+    $(this).toggleClass('.selected');
   });
 });
 
