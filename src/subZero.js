@@ -2,8 +2,8 @@ var SubZero = function(top, left, timeBetweenSteps) {
   makeBlinkyDancer.call(this, top, left, timeBetweenSteps); 
   this.top = top;
   this.left = left;
-  $(this).addClass('.subzero');
-  this.$node = $('<span class="dancer subzero" img></span>');
+  $(this).addClass('.subZero');
+  // this.$node = $('<span class="dancer subzero" img></span>');
 
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
