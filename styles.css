@@ -21,7 +21,17 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  border:5px solid yellow;
+  border-radius:3px;
   position:absolute;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 150px;
+/*}
+
+.subzero{*/
+  background-image: url("img/subzero_demo.gif");
+ 
 }

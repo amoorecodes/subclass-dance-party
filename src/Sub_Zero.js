@@ -1,8 +1,10 @@
-var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps); 
+var SubZero = function(top, left, timeBetweenSteps) {
+  makeBlinkyDancer.call(this, top, left, timeBetweenSteps); 
   this.top = top;
   this.left = left;
-  
+  $(this).addClass('.subzero');
+  this.$node = $('<span class="dancer subzero" img></span>');
+
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
@@ -10,17 +12,8 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // this.$node = $('<span class="blinkyDancer"></span>');
 
 };
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
-makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
-makeBlinkyDancer.prototype.oldStep = makeDancer.prototype.step
-makeBlinkyDancer.prototype.step = function() {
-  makeDancer.prototype.step.call(this);
-
-  this.$node.toggle();
-  this.toggleClass($'.subzero')
-  // this.oldStep();
- 
-};
+SubZero.prototype = Object.create(makeBlinkyDancer.prototype);
+SubZero.prototype.constructor = SubZero;
 
 // var makeBlinkyDancer = class BlinkyDancer extends makeDancer {
 //   constructor() {
