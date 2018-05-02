@@ -11,5 +11,3 @@ Kitana.prototype.step = function() {
   makeDancer.prototype.step.call(this);
   $(this.$node).toggleClass('kitana2');
 }
-debugger
-console.log(Kitana.prototype.constructor);

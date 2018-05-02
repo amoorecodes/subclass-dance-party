@@ -19,14 +19,25 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('.dancefloor').append(dancer.$node);
+    window.dancers.push(dancer);
   });
 
   
-  $("button").on('click', function(event){
-    console.log($('.align-dancer'));
-    for(var i = 0; i < window.dancers; i++) {
-      var dancer = window.dancers[i];
-      $(dancer).appendTo('.align-dancers');
+
+  
+  $(".align").on('click', function(event){
+    // console.log($('.align-dancer'));
+    // $('.dancer').appendTo('.align-dancer');
+     var x = 0;
+     var z = 100;
+    for( var i = 0; i < window.dancers.length; i+=2) {
+      window.dancers[i].setPosition(650, x);
+      x += 150;
+    }
+
+    for( var i = 1; i < window.dancers.length; i+=2) {
+      window.dancers[i].setPosition(550, z);
+      z += 150;
     }
     
   });
