@@ -1,4 +1,4 @@
-body, html{
+/*body, html{
   height:100%;
 }
 body{
@@ -28,9 +28,7 @@ body, a:link, a:visited, a:active{
   height: 200px;
   width: 150px;
   background-image: url("img/subzero_demo.gif")
-/*}
 
-.subzero{*/
  
 }
 
@@ -42,12 +40,48 @@ body, a:link, a:visited, a:active{
   background-image: url("img/kitana/kitana_whip.gif");
 }
 
+.kitana2{
+  background-image: url("img/kitana/kitana_rewind.gif");
+}
+
 .kitana:hover{
-  background-color: url("img/kitana/kitana_rewind.png");
+  background-image: url("img/kitana/kitana_finish.gif");
+}
+
+.raiden{
+  background-image: url("img/raiden/raiden_punch.gif");
+}
+
+.raiden2{
+  background-image: url("img/raiden/raiden_pray.gif");
+}
+
+.raiden:hover{
+  background-image: url("img/raiden/raiden_drunk4.gif");
 }
 
 .subZero{
-  background-image: url('img/subzero/subzer_walk.gif');
+  background-image: url("img/subzero/subzero_walk.gif");
+}
+
+.subZero2{
+  background-image: url("img/subzero/subzero_icemove.gif");
+}
+
+.subZero:hover{
+  background-image: url("img/subzero/subzero_swim.gif")
+}
+
+.liuKang{
+  background-image: url("img/liukang/liu_kang_dance.gif");
+}
+
+.liuKang2{
+  background-image: url("img/liukang/liu_kang_drunk.gif");
+}
+
+.liuKang:hover{
+  background-image: url("img/liukang/liu_kang_fatality.gif");
 }
 
 .container {
@@ -61,10 +95,9 @@ body, a:link, a:visited, a:active{
   "dancefloor dancefloor dancefloor"
   "footer footer footer footer  footer";
   /*align-items: center;*/
-}
 
-.dancefloor {
-  /*grid-area: "dancefloor";*/
+
+/*.dancefloor {
   background-image: url("img/background/temple.png");
   width: 100%;
   height: 100%;
@@ -85,6 +118,163 @@ body, a:link, a:visited, a:active{
   height:32px;
   background-color: #555;
   grid-area: "header";
+}*/
+
+body, html{
+  height:100%;
+  width: 100%;
+  background: url(img/background/temple.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-y:hidden;
+}
+body{
+  margin: 0px;
+  background-color:#444;
+  font-size: 18px;
+}
+body, a:link, a:visited, a:active{
+  color: lightblue;
+}
+.title, .addDancerButton{
+  padding:5px 12px;
+  float:right;
+
 }
 
-.
+.navbar {
+  height: 70px;
+  color: #FFF;
+  background-color: #1e2226 !important;
+  overflow: hidden;
+}
+
+.title{
+  background-color: #777;
+}
+.dancer{
+  position:absolute;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 150px;
+  background-image: url("img/subzero_demo.gif"); 
+}
+
+.kitana{
+  background-image: url("img/kitana/kitana_whip.gif");
+}
+
+.kitana2{
+  background-image: url("img/kitana/kitana_rewind.gif");
+}
+
+.kitana:hover{
+  background-image: url("img/kitana/kitana_finish.gif");
+}
+
+.raiden{
+  background-image: url("img/raiden/raiden_punch.gif");
+}
+
+.raiden2{
+  background-image: url("img/raiden/raiden_pray.gif");
+}
+
+.raiden:hover{
+  background-image: url("img/raiden/raiden_drunk4.gif");
+}
+
+.subZero{
+  background-image: url("img/subzero/subzero_walk.gif");
+}
+
+.subZero2{
+  background-image: url("img/subzero/subzero_icemove.gif");
+}
+
+.subZero:hover{
+  background-image: url("img/subzero/subzero_fatality.gif");
+}
+
+.liuKang{
+  background-image: url("img/liukang/liu_kang_dance.gif");
+}
+
+.liuKang2{
+  background-image: url("img/liukang/liu_kang_drunk.gif");
+}
+
+.liuKang:hover{
+  background-image: url("img/liukang/liu_kang_fatality.gif");
+}
+
+
+.container {
+  display: inline-grid grid;
+  grid-template-columns: 15%  auto auto auto 15%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+  "header header header header header"
+  "dancefloor dancefloor dancefloor"
+  "dancefloor dancefloor dancefloor"
+  "dancefloor dancefloor dancefloor"
+  "footer footer footer footer  footer";
+}
+
+.dancefloor {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  min-width: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  color: #FFF;
+  position: absolute;
+  margin: 0px;
+	z-index: 2;
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+	padding-bottom: 10px;
+}
+
+.header {
+  height:32px;
+  background-color: #555;
+  grid-area: "header";
+}
+
+.player-button {
+  padding: 3px 3px 3px 3px;
+  height: 55px; 
+  width: 70px; 
+  overflow: hidden;
+ background: center center;
+}
+
+.mk-logo {
+  /*background: url(/img/Mk3_logo.png) no-repeat center center fixed; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-y:hidden;
+}
+
+.align-dancers{
+  padding: 0px 10px 0px 10px;
+}
+
+button{
+  height: 50px;
+  width: 50px;
+  background-color: greenyellow;
+}
